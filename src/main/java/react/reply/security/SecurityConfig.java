@@ -60,7 +60,7 @@ public class SecurityConfig {
 		http.authenticationManager(authenticationManager);
 
 		// 필터
-		ApiLoginFilter apiLoginFilter = new ApiLoginFilter("/auth"); // 토큰발급URL (http://localhost:8080/auth)
+		ApiLoginFilter apiLoginFilter = new ApiLoginFilter("/api/auth"); // 토큰발급URL (http://localhost:8080/auth)
 		apiLoginFilter.setAuthenticationManager(authenticationManager);
 		apiLoginFilter.setAuthenticationSuccessHandler(new APILoginSuccessHandler(jwtUtil));
 
