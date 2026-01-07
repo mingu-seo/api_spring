@@ -25,7 +25,8 @@ public class TokenCheckFilter extends OncePerRequestFilter {
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)
             throws ServletException, IOException {
         String path = request.getRequestURI();
-        if (!path.startsWith("/api")) { // /api 주소가 아니면(일반접속이면) 통과
+        log.info("현재 경로:"+path);
+        if (!path.startsWith("/api") || path.startsWith("/api/auth")) { // /api가 아니거나(일반접속), /api/auth(로그인) 이면 통과
             filterChain.doFilter(request, response);
             return;
         }

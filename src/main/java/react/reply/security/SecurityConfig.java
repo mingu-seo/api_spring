@@ -39,7 +39,7 @@ public class SecurityConfig {
 		http.csrf(csrf -> csrf.disable()); // CSRF 토큰 미사용 설정
 
 		// CORS 설정
-		http.cors(cors -> cors.configurationSource(corsConfigurationSource()));
+		//http.cors(cors -> cors.configurationSource(corsConfigurationSource()));
 
 		http.formLogin(c -> {
 			// 이전페이지가 없는 상태에서 로그인성공 후 이동되는 페이지

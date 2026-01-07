@@ -30,7 +30,7 @@
 					}
 				},
 				"url": {
-					"raw": "{{domain}}/auth",
+					"raw": "{{domain}}/api/auth",
 					"host": [
 						"{{domain}}"
 					],
