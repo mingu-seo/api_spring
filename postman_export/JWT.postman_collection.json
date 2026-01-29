@@ -1,9 +1,10 @@
 {
 	"info": {
-		"_postman_id": "5b93bf44-f6ea-4e34-b291-d974683b5138",
+		"_postman_id": "1fbe41be-7869-403c-bd35-9e3195d00584",
 		"name": "JWT",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "31838857"
+		"_exporter_id": "31838857",
+		"_collection_link": "https://asdf44-8340.postman.co/workspace/react_spring~be1b2892-2a0e-486c-93b1-b1a683fb1ef2/collection/31838857-1fbe41be-7869-403c-bd35-9e3195d00584?action=share&source=collection_link&creator=31838857"
 	},
 	"item": [
 		{
@@ -35,6 +36,7 @@
 						"{{domain}}"
 					],
 					"path": [
+						"api",
 						"auth"
 					]
 				}
