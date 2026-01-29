@@ -39,7 +39,7 @@ public class SecurityConfig {
 		http.csrf(csrf -> csrf.disable()); // CSRF 토큰 미사용 설정
 
 		// CORS 설정
-		//http.cors(cors -> cors.configurationSource(corsConfigurationSource()));
+		http.cors(cors -> cors.configurationSource(corsConfigurationSource()));
 
 		http.formLogin(c -> {
 			// 이전페이지가 없는 상태에서 로그인성공 후 이동되는 페이지
@@ -83,7 +83,7 @@ public class SecurityConfig {
 	public CorsConfigurationSource corsConfigurationSource() {
 		CorsConfiguration configuration = new CorsConfiguration();
 		configuration.setAllowCredentials(true);
-		configuration.addAllowedOriginPattern("http://localhost:3000/"); // 리액트 URL 허용
+		configuration.addAllowedOriginPattern("http://localhost:3000"); // 리액트 도메인 허용
 		configuration.addAllowedHeader("*"); // 모든 헤더 허용
 		configuration.addAllowedMethod("*"); // 모든 HTTP 메서드 허용
 
